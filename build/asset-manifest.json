@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-todo-list/static/css/main.6ffd82c1.chunk.css",
-    "main.js": "/react-todo-list/static/js/main.396f012b.chunk.js",
-    "main.js.map": "/react-todo-list/static/js/main.396f012b.chunk.js.map",
-    "runtime-main.js": "/react-todo-list/static/js/runtime-main.90e5866e.js",
-    "runtime-main.js.map": "/react-todo-list/static/js/runtime-main.90e5866e.js.map",
-    "static/js/2.90632adb.chunk.js": "/react-todo-list/static/js/2.90632adb.chunk.js",
-    "static/js/2.90632adb.chunk.js.map": "/react-todo-list/static/js/2.90632adb.chunk.js.map",
-    "index.html": "/react-todo-list/index.html",
-    "precache-manifest.72d3619eb8a504a2e1c360a2c2732cfb.js": "/react-todo-list/precache-manifest.72d3619eb8a504a2e1c360a2c2732cfb.js",
-    "service-worker.js": "/react-todo-list/service-worker.js",
-    "static/css/main.6ffd82c1.chunk.css.map": "/react-todo-list/static/css/main.6ffd82c1.chunk.css.map",
-    "static/js/2.90632adb.chunk.js.LICENSE.txt": "/react-todo-list/static/js/2.90632adb.chunk.js.LICENSE.txt",
-    "static/media/checkbox.svg": "/react-todo-list/static/media/checkbox.50294de8.svg",
-    "static/media/done.svg": "/react-todo-list/static/media/done.406450f3.svg",
-    "static/media/trash-can.svg": "/react-todo-list/static/media/trash-can.29cca656.svg"
+    "main.css": "/ReactToDoList/static/css/main.6ffd82c1.chunk.css",
+    "main.js": "/ReactToDoList/static/js/main.54e3eb4f.chunk.js",
+    "main.js.map": "/ReactToDoList/static/js/main.54e3eb4f.chunk.js.map",
+    "runtime-main.js": "/ReactToDoList/static/js/runtime-main.302ca297.js",
+    "runtime-main.js.map": "/ReactToDoList/static/js/runtime-main.302ca297.js.map",
+    "static/js/2.90632adb.chunk.js": "/ReactToDoList/static/js/2.90632adb.chunk.js",
+    "static/js/2.90632adb.chunk.js.map": "/ReactToDoList/static/js/2.90632adb.chunk.js.map",
+    "index.html": "/ReactToDoList/index.html",
+    "precache-manifest.02d41c954d7ac98496972606e2db2693.js": "/ReactToDoList/precache-manifest.02d41c954d7ac98496972606e2db2693.js",
+    "service-worker.js": "/ReactToDoList/service-worker.js",
+    "static/css/main.6ffd82c1.chunk.css.map": "/ReactToDoList/static/css/main.6ffd82c1.chunk.css.map",
+    "static/js/2.90632adb.chunk.js.LICENSE.txt": "/ReactToDoList/static/js/2.90632adb.chunk.js.LICENSE.txt",
+    "static/media/checkbox.svg": "/ReactToDoList/static/media/checkbox.50294de8.svg",
+    "static/media/done.svg": "/ReactToDoList/static/media/done.406450f3.svg",
+    "static/media/trash-can.svg": "/ReactToDoList/static/media/trash-can.29cca656.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.90e5866e.js",
+    "static/js/runtime-main.302ca297.js",
     "static/js/2.90632adb.chunk.js",
     "static/css/main.6ffd82c1.chunk.css",
-    "static/js/main.396f012b.chunk.js"
+    "static/js/main.54e3eb4f.chunk.js"
   ]
 }
