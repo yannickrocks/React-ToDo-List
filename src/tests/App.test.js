@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent} from '@testing-library/react';
-import {Form} from '../Form';
+import {Form} from '../App';
 
 it("renders correctly", () => {
     const { queryByClassName, queryByPlaceholderText} = render(<Form />)

@@ -13,7 +13,8 @@ class App extends React.Component {
         text:'',
         key: '',
         checked: false,
-        img: CheckBox
+        img: CheckBox,
+        strike: ""
       }
     }
     this.handleInput = this.handleInput.bind(this);
@@ -29,7 +30,8 @@ class App extends React.Component {
         text: e.target.value,
         key: Date.now(),
         checked: false,
-        img: CheckBox
+        img: CheckBox,
+        strike: ""
       }
     })
   };
@@ -37,8 +39,7 @@ class App extends React.Component {
   addItem(e){
     e.preventDefault();
     const newItem = this.state.currentItem;
-    console.log(newItem);
-    if(newItem !== "") {
+    if(newItem.text !== "") {
       const newItems=[newItem,...this.state.items];
       this.setState({
         items:newItems,
@@ -46,7 +47,8 @@ class App extends React.Component {
           text:'',
           key:'',
           checked: false,
-          img: CheckBox
+          img: CheckBox,
+          strike: ""
         }
       })
     }
@@ -63,13 +65,15 @@ class App extends React.Component {
     const itemIndex = this.state.items.findIndex(item => item.key === key)
     let newItems = [...this.state.items];
     const newItemImage = this.state.items.find(item => item.key === key);
-    if(newItemImage.checked){
+    if(newItemImage.checked) {
       newItemImage.checked = false;
       newItemImage.img = CheckBox;
+      newItemImage.strike = ""
     }
-    else{
+    else {
       newItemImage.checked = true;
       newItemImage.img = Done
+      newItemImage.strike = "app__iteminput--strikethrough"
     }
     console.log(newItemImage);
 

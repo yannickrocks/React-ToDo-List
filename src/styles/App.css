@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .app {
   width: 80%; 
   margin-top: 10px;
@@ -69,7 +70,6 @@ body {
   display: flex;
 }
 
-
 .app__item {
   display: flex;
   flex-direction: row;
@@ -83,17 +83,12 @@ body {
   border-radius: 5px;
 }
 
-.app__untickedbox {
+.app__icon{
   min-width: 25px;
   max-width: 25px;
   height: auto;
 }
 
-.app__tickedbox {
-  min-width: 25px;
-  max-width: 25px;
-  height: auto;
-}
 
 .app__iteminput {
   background: transparent;
@@ -106,15 +101,140 @@ body {
   word-break: break-all;
   flex-grow: 1;
   max-width: 100%;
+  min-width: 200px;
 }
 
 .app__iteminput:focus {
   outline: none;
 }
 
-.app__trashcan {
-  min-width: 25px;
-  max-width: 25px;
-  height: auto;
+.app__icon--trashcan {
   margin-left: 10px;
+}
+
+.app__iteminput--strikethrough {
+  text-decoration: line-through;
+}
+
+@media only screen and (min-width: 768px) {
+  .app__input {
+    font-size: 25px;
+  }
+
+  .app__input::placeholder {
+    font-size: 25px;
+  }
+  
+  .app__button {
+    top: -20px;
+    font-size: 70px; 
+  }
+  
+  .app__item {
+    font-size: 25px;
+    padding: 15px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 5px;    
+  }
+
+  .app__checkbox {
+    min-width: 30px;
+    max-width: 30px;
+    margin-right: 10px;
+  }
+
+  .app__iteminput {
+    min-width: 450px;
+  }
+
+  .app__trashcan {
+    min-width: 30px;
+    max-width: 30px;
+    margin-left: 15px;
+  }  
+}
+
+@media only screen and (min-width: 768px) {
+  .app__input {
+    font-size: 25px;
+  }
+
+  .app__input::placeholder {
+    font-size: 25px;
+  }
+  
+  .app__button {
+    top: -20px;
+    font-size: 70px; 
+  }
+  
+  .app__item {
+    font-size: 25px;
+    padding: 15px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 5px;    
+  }
+
+  .app__icon{
+    min-width: 30px;
+    max-width: 30px;
+  }
+
+  .app__icon--checkbox{
+    margin-right: 10px;
+  }
+
+  .app__iteminput {
+    min-width: 450px;
+  }
+
+  .app__icon--trashcan {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .app {
+    max-width: 1000px;
+    margin-top: 40px;
+  }
+  .app__input {
+    font-size: 25px;
+  }
+
+  .app__input::placeholder {
+    font-size: 25px;
+  }
+  
+  .app__button {
+    top: -20px;
+    font-size: 70px; 
+  }
+  
+  .app__item {
+    font-size: 25px;
+    padding: 15px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 5px;    
+  }
+
+  .app__icon{
+    min-width: 30px;
+    max-width: 30px;
+  }
+
+  .app__icon--checkbox{
+    margin-right: 10px;
+  }
+
+  .app__iteminput {
+    min-width: 450px;
+  }
+
+  .app__icon--trashcan {
+    margin-left: 15px;
+  }
 }
