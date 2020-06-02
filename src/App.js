@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles/App.css';
-import ListItems from './ListItems.js'
 import CheckBox from './assets/checkbox.svg';
 import Done from './assets/done.svg';
+import ListItems from './ListItems.js'
+import Form from './Form.js'
 
 class App extends React.Component {
   constructor(props){
@@ -39,7 +39,7 @@ class App extends React.Component {
     const newItem = this.state.currentItem;
     console.log(newItem);
     if(newItem !== "") {
-      const newItems=[...this.state.items, newItem];
+      const newItems=[newItem,...this.state.items];
       this.setState({
         items:newItems,
         currentItem: {
@@ -59,56 +59,48 @@ class App extends React.Component {
     })
   };
 
-changeImage(item, key){
-  const itemIndex = this.state.items.findIndex(item => item.key == key)
-  let newItems = [...this.state.items];
-  const newItemImage = this.state.items.find(item => item.key == key);
-  if(newItemImage.checked){
-    newItemImage.checked = false;
-    newItemImage.img = CheckBox;
-  }
-  else{
-    newItemImage.checked = true;
-    newItemImage.img = Done
-  }
-  console.log(newItemImage);
-
-  newItems[itemIndex] = newItemImage;
-    this.setState({
-      items: newItems
-  })
-}
-
-setUpdate(text, key){
-  const items = this.state.items;
-  items.map(item => {
-    if(item.key === key){
-      item.text=text;
+  changeImage(item, key){
+    const itemIndex = this.state.items.findIndex(item => item.key === key)
+    let newItems = [...this.state.items];
+    const newItemImage = this.state.items.find(item => item.key === key);
+    if(newItemImage.checked){
+      newItemImage.checked = false;
+      newItemImage.img = CheckBox;
     }
-    
+    else{
+      newItemImage.checked = true;
+      newItemImage.img = Done
+    }
+    console.log(newItemImage);
+
+    newItems[itemIndex] = newItemImage;
+      this.setState({
+        items: newItems
+    })
+  }
+
+  setUpdate(text, key){
+    const items = this.state.items;
+    items.filter(item => item.key === key)
+    .map(item =>  item.text=text )
+
     this.setState({
       items:items
     })
-  })
-}
+  }
 
 
   render(){
     return(
-     <div className="App">
-        <header>
-        <form id="to-do-form" onSubmit={this.addItem}>
-          <input type="text" placeholder="Enter Text"
-            value = {this.state.currentItem.text}
-            onChange = {this.handleInput}/>
-          <button type="submit">Add</button>
-          </form>        
-        </header>
+     <div className="app">
+        <Form addItem = {this.addItem}
+              handleInput = {this.handleInput}
+              value = {this.state.currentItem.text}
+          />
         <ListItems items = {this.state.items}
           deleteItem = {this.deleteItem}
           changeImage = {this.changeImage}
-          setUpdate ={this.setUpdate}
-          />
+          setUpdate ={this.setUpdate}  />
      </div>
     );
   }

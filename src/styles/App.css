@@ -1,41 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap');
+
 body {
- background-color:slategrey;
+  background-color:slategrey;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial;
+ }
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.app {
+  width: 80%; 
+  margin-top: 10px;
 }
 
-.App {
-  background-color: thistle;
-  min-height: 500px;
-  width: 400px;
-  margin: 3px auto;
+.app__todoform{
+  margin-top: 20px;
+  display: flex;
+  position: relative;
 }
 
-#to-do-form input {
-  background-color: violet;
+.app__input {
+  background: transparent;
   border: 0;
-  width: 200px;
-  height: 50px;
-  margin: 20px;
-  padding: 0 20px;
-  color: #fff;
+  border-bottom: 1px solid white;
+  color: white; 
   font-size: 18px;
-  border-radius: 10px;
+  font-family: 'Montserrat', Arial;
+  padding: 10px 10px;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
-#to-do-form input::placeholder{
-  color:black;
+.app__input::placeholder{
+  color: white; 
+  font-size: 18px;
+  font-family: 'Montserrat', Arial;
 }
 
-#to-do-form input:focus, #to-do-form button:focus{
+.app__button {
+  font-family: 'Montserrat', Arial;
+  cursor: pointer;
+  border: 10px;
+  font-size: 50px;
+  font-weight: 200;
+  background: transparent;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+.app__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+  position: relative;
+  width:100%;
+}
+
+.app__checkboxinput{
+  display: flex;
+}
+
+
+.app__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0;
+  border-bottom: 1px solid white;
+  font-size: 18px;
+  padding: 10px;
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.app__untickedbox {
+  min-width: 25px;
+  max-width: 25px;
+  height: auto;
+}
+
+.app__tickedbox {
+  min-width: 25px;
+  max-width: 25px;
+  height: auto;
+}
+
+.app__iteminput {
+  background: transparent;
+  color: black;
+  border: 0px;
+  font-weight: 400;
+  font-family: 'Montserrat', Arial;
+  margin-left: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.app__iteminput:focus {
   outline: none;
 }
 
-#to-do-form button {
-  height: 50px;
-  width: 80px;
-  border-radius: 5px;
-  border: 0;
-  background-color:orange;
-  cursor: pointer;
-  font-weight: bolder;
-  color: #fff;
+.app__trashcan {
+  min-width: 25px;
+  max-width: 25px;
+  height: auto;
+  margin-left: 10px;
 }
