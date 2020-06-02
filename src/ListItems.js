@@ -9,14 +9,15 @@ export default class ListItems extends React.Component {
         const listItems = items.map(item => 
             {
                 let checkBoxImage;
-                if(item.checked){
-                    checkBoxImage = <Done className="app__icon app__icon--checkbox" 
-                        alt="Ticked Square"
-                    onClick={() => this.props.changeImage(item, item.key)} />
+                if(item.strike === "") {
+                    checkBoxImage = <CheckBox className="app__icon app__icon--checkbox" 
+                                    alt="Unticked Square"
+                                    onClick={() => this.props.changeImage(item, item.key)} />
                 }
-                else{
-                    checkBoxImage = <CheckBox className="app__icon app__icon--checkbox" alt="Unticked Square"
-                                onClick={() => this.props.changeImage(item, item.key)} />
+                else {
+                    checkBoxImage = <Done className="app__icon app__icon--checkbox" 
+                                    alt="Ticked Square"
+                                    onClick={() => this.props.changeImage(item, item.key)} />
                 }
                 return( 
                         <li className="app__item" key={item.key}>

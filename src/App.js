@@ -12,8 +12,6 @@ class App extends React.Component {
       currentItem: {
         text:'',
         key: '',
-        checked: false,
-        img: CheckBox,
         strike: ""
       }
     }
@@ -29,8 +27,6 @@ class App extends React.Component {
       currentItem:{
         text: e.target.value,
         key: Date.now(),
-        checked: false,
-        img: CheckBox,
         strike: ""
       }
     })
@@ -46,8 +42,6 @@ class App extends React.Component {
         currentItem: {
           text:'',
           key:'',
-          checked: false,
-          img: CheckBox,
           strike: ""
         }
       })
@@ -64,16 +58,13 @@ class App extends React.Component {
   changeImage(item, key){
     const itemIndex = this.state.items.findIndex(item => item.key === key)
     let newItems = [...this.state.items];
+    
     const newItemImage = this.state.items.find(item => item.key === key);
-    if(newItemImage.checked) {
-      newItemImage.checked = false;
-      newItemImage.img = CheckBox;
-      newItemImage.strike = ""
+    if(newItemImage.strike === "") {
+      newItemImage.strike = "app__iteminput--strikethrough"
     }
     else {
-      newItemImage.checked = true;
-      newItemImage.img = Done
-      newItemImage.strike = "app__iteminput--strikethrough"
+      newItemImage.strike = ""      
     }
     console.log(newItemImage);
 
@@ -96,16 +87,17 @@ class App extends React.Component {
 
   render(){
     return(
-     <div className="app">
+      <div className="app">
+        <h1 className="app__heading">To-Do List</h1>
         <Form addItem = {this.addItem}
               handleInput = {this.handleInput}
               value = {this.state.currentItem.text}
-          />
+        />
         <ListItems items = {this.state.items}
           deleteItem = {this.deleteItem}
           changeImage = {this.changeImage}
           setUpdate ={this.setUpdate}  />
-     </div>
+      </div>
     );
   }
 };

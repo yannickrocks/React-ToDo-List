@@ -18,6 +18,10 @@ body {
   margin-top: 10px;
 }
 
+.app__heading{
+  display: none;
+}
+
 .app__todoform{
   margin-top: 20px;
   display: flex;
@@ -132,15 +136,15 @@ body {
   
   .app__item {
     font-size: 25px;
-    padding: 15px;
-    background-color: white;
-    margin: 10px 0;
-    border-radius: 5px;    
+    padding: 15px;   
   }
 
-  .app__checkbox {
+  .app__icon{
     min-width: 30px;
     max-width: 30px;
+  }
+
+  .app__icon--checkbox{
     margin-right: 10px;
   }
 
@@ -148,11 +152,9 @@ body {
     min-width: 450px;
   }
 
-  .app__trashcan {
-    min-width: 30px;
-    max-width: 30px;
+  .app__icon--trashcan {
     margin-left: 15px;
-  }  
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -171,10 +173,7 @@ body {
   
   .app__item {
     font-size: 25px;
-    padding: 15px;
-    background-color: white;
-    margin: 10px 0;
-    border-radius: 5px;    
+    padding: 15px;   
   }
 
   .app__icon{
@@ -199,42 +198,5 @@ body {
   .app {
     max-width: 1000px;
     margin-top: 40px;
-  }
-  .app__input {
-    font-size: 25px;
-  }
-
-  .app__input::placeholder {
-    font-size: 25px;
-  }
-  
-  .app__button {
-    top: -20px;
-    font-size: 70px; 
-  }
-  
-  .app__item {
-    font-size: 25px;
-    padding: 15px;
-    background-color: white;
-    margin: 10px 0;
-    border-radius: 5px;    
-  }
-
-  .app__icon{
-    min-width: 30px;
-    max-width: 30px;
-  }
-
-  .app__icon--checkbox{
-    margin-right: 10px;
-  }
-
-  .app__iteminput {
-    min-width: 450px;
-  }
-
-  .app__icon--trashcan {
-    margin-left: 15px;
-  }
+  }  
 }
