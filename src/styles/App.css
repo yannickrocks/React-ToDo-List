@@ -22,6 +22,10 @@ body {
   display: none;
 }
 
+.app__label{
+  display: none;
+}
+
 .app__todoform{
   margin-top: 20px;
   display: flex;
@@ -92,6 +96,11 @@ body {
   max-width: 25px;
   height: auto;
 }
+
+/* .app__icon:focus {
+  border-color: blue;
+  outline: blue;
+} */
 
 
 .app__iteminput {

@@ -1,6 +1,4 @@
 import React from 'react';
-import CheckBox from './assets/checkbox.svg';
-import Done from './assets/done.svg';
 import ListItems from './ListItems.js'
 import Form from './Form.js'
 

@@ -4,6 +4,7 @@ import {ReactComponent as CheckBox} from './assets/checkbox.svg';
 import {ReactComponent as Done} from './assets/done.svg';
 
 export default class ListItems extends React.Component {
+
     render() {
         const items = this.props.items;
         const listItems = items.map(item => 
@@ -11,12 +12,14 @@ export default class ListItems extends React.Component {
                 let checkBoxImage;
                 if(item.strike === "") {
                     checkBoxImage = <CheckBox className="app__icon app__icon--checkbox" 
-                                    alt="Unticked Square"
+                                    alt="Unticked Square" tabIndex="0"
+                                    onKeyPress={() => this.props.changeImage(item, item.key)}
                                     onClick={() => this.props.changeImage(item, item.key)} />
                 }
                 else {
                     checkBoxImage = <Done className="app__icon app__icon--checkbox" 
-                                    alt="Ticked Square"
+                                    alt="Ticked Square" tabIndex="0"
+                                    onKeyPress={() => this.props.changeImage(item, item.key)}
                                     onClick={() => this.props.changeImage(item, item.key)} />
                 }
                 return( 
@@ -32,7 +35,9 @@ export default class ListItems extends React.Component {
                                             this.props.setUpdate(e.target.value, item.key)
                                         }}>{item.text}</div>
                             </div>
-                            <TrashCan className="app__icon app__icon--trashcan" alt="Trash Can Icon"
+                            <TrashCan className="app__icon app__icon--trashcan" 
+                                        alt="Trash Can Icon" tabIndex="0"
+                                        onKeyPress = { () => this.props.deleteItem(item.key)}
                                         onClick = { () => this.props.deleteItem(item.key)} />
                         </li>
                         )
