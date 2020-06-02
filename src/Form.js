@@ -5,7 +5,7 @@ export default class Form extends React.Component {
         const newItem = this.props.value;
         return (
         <form className="app__todoform" onSubmit={(e) => this.props.addItem(e)} >
-            <label for="app__input" className="app__label">Add a new Task</label>
+            <label htmlFor="app__input" className="app__label">Add a new Task</label>
             <input className="app__input"
                     id="app__input"
                     placeholder="Add a new task"
