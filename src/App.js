@@ -16,7 +16,7 @@ class App extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
-    this.changeImage = this.changeImage.bind(this);
+    this.checkItem = this.checkItem.bind(this);
     this.setUpdate = this.setUpdate.bind(this);
   }
 
@@ -53,7 +53,7 @@ class App extends React.Component {
     })
   };
 
-  changeImage(item, key){
+  checkItem(item, key){
     const itemIndex = this.state.items.findIndex(item => item.key === key)
     let newItems = [...this.state.items];
     
@@ -93,7 +93,7 @@ class App extends React.Component {
         />
         <ListItems items = {this.state.items}
           deleteItem = {this.deleteItem}
-          changeImage = {this.changeImage}
+          checkItem = {this.checkItem }
           setUpdate ={this.setUpdate}  />
       </div>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import {ReactComponent as TrashCan} from './assets/trash-can.svg';
-import {ReactComponent as CheckBox} from './assets/checkbox.svg';
 import {ReactComponent as Done} from './assets/done.svg';
 
 export default class ListItems extends React.Component {
@@ -10,18 +9,13 @@ export default class ListItems extends React.Component {
         const listItems = items.map(item => 
             {
                 let checkBoxImage;
-                if(item.strike === "") {
-                    checkBoxImage = <CheckBox className="app__icon app__icon--checkbox" 
-                                    alt="Unticked Square" tabIndex="0"
-                                    onKeyPress={() => this.props.changeImage(item, item.key)}
-                                    onClick={() => this.props.changeImage(item, item.key)} />
-                }
-                else {
-                    checkBoxImage = <Done className="app__icon app__icon--checkbox" 
-                                    alt="Ticked Square" tabIndex="0"
-                                    onKeyPress={() => this.props.changeImage(item, item.key)}
-                                    onClick={() => this.props.changeImage(item, item.key)} />
-                }
+                checkBoxImage = <input type="checkbox"
+                                    data-testid="app__checkbox"
+                                    className="app__checkbox"
+                                    aria-label="Checkbox item"
+                                    alt="Checkbox item"
+                                    onKeyPress={() => this.props.checkItem(item, item.key)}
+                                    onClick={() => this.props.checkItem(item, item.key)} />
                 return( 
                         <li className="app__item" key={item.key}>
                             <div className="app__checkboxinput">
@@ -30,7 +24,8 @@ export default class ListItems extends React.Component {
                                         contentEditable="true"
                                         suppressContentEditableWarning="true"
                                         type="text" 
-                                        id={item.text} 
+                                        id={item.text}
+                                        data-testid="app"
                                         onChange={(e) => {
                                             this.props.setUpdate(e.target.value, item.key)
                                         }}>{item.text}</div>
