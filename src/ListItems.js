@@ -18,14 +18,13 @@ export default class ListItems extends React.Component {
                                     onClick={() => this.props.checkItem(item, item.key)} />
                 return( 
                         <li className="app__item" key={item.key}>
-                            <div className="app__checkboxinput">
+                            <div className="app__checkboxinput" data-testid="app__checkboxinput">
                                 {checkBoxImage}
                                 <div className={"app__iteminput " + item.strike } 
                                         contentEditable="true"
                                         suppressContentEditableWarning="true"
                                         type="text" 
                                         id={item.text}
-                                        data-testid="app"
                                         onChange={(e) => {
                                             this.props.setUpdate(e.target.value, item.key)
                                         }}>{item.text}</div>
@@ -39,7 +38,7 @@ export default class ListItems extends React.Component {
             })
             
         return(
-            <ul className="app__list" >{listItems}</ul>
+            <ul className="app__list">{listItems}</ul>
         );
     }
 }

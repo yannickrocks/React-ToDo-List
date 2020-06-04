@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from 'react-dom'
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import App from "../App";
 
@@ -15,31 +14,30 @@ describe("when input value is ", () => {
         expect(taskInput.value).toBe("test")
     })
 
-    describe("empty value", () =>
-        it("no item appears in list", () => {
-            const requestAddItem = jest.fn()
-            
-            const { queryByTestId } = render(<App requestAddItem = {requestAddItem} />)
+    describe("empty value", () =>  {
+        it("no item appears in list", () => {            
+            const { queryByTestId } = render(<App />)
             const listitems = queryByTestId('app__list')
         
             fireEvent.click(queryByTestId('app__button'))
-            expect(requestAddItem).not.toHaveBeenCalled()
+            
             expect(listitems).toBe(null)
         })
-    )
+    })
 
-    describe("entered", () =>
+
+    describe("entered", () => {
         it("item appears in list", () => {
-            const requestAddItem = jest.fn()
-            const { queryByTestId } = render(<App />)
+            const { queryByTestId, queryByText } = render(<App />)
             const taskInput = queryByTestId('app__input')
-            const listitems = queryByTestId('app__list')
-        
-            fireEvent.change(taskInput, {target: {value:"test"}})
+                    
+            fireEvent.change(taskInput, {target: {value:"King stewie"}})
             fireEvent.click(queryByTestId('app__button'))
-          
-            expect(requestAddItem).toHaveBeenCalled()
+
+            // const listItem = queryByText('King stewie')
+            console.log(listItem)
+            expect(listItem).toBeInTheDocument()
         })
-    )
+    })
 })
 
