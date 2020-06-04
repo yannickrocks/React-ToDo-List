@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/ReactToDoList/static/css/main.5bf606f0.chunk.css",
-    "main.js": "/ReactToDoList/static/js/main.9b849be3.chunk.js",
-    "main.js.map": "/ReactToDoList/static/js/main.9b849be3.chunk.js.map",
+    "main.css": "/ReactToDoList/static/css/main.3d3f94c5.chunk.css",
+    "main.js": "/ReactToDoList/static/js/main.1a59ea34.chunk.js",
+    "main.js.map": "/ReactToDoList/static/js/main.1a59ea34.chunk.js.map",
     "runtime-main.js": "/ReactToDoList/static/js/runtime-main.302ca297.js",
     "runtime-main.js.map": "/ReactToDoList/static/js/runtime-main.302ca297.js.map",
     "static/js/2.1a32253b.chunk.js": "/ReactToDoList/static/js/2.1a32253b.chunk.js",
     "static/js/2.1a32253b.chunk.js.map": "/ReactToDoList/static/js/2.1a32253b.chunk.js.map",
     "index.html": "/ReactToDoList/index.html",
-    "precache-manifest.4a40aed49489ff3d40948d30d9939657.js": "/ReactToDoList/precache-manifest.4a40aed49489ff3d40948d30d9939657.js",
+    "precache-manifest.35becbc33aafdbe8f0b04b1d5b2878df.js": "/ReactToDoList/precache-manifest.35becbc33aafdbe8f0b04b1d5b2878df.js",
     "service-worker.js": "/ReactToDoList/service-worker.js",
-    "static/css/main.5bf606f0.chunk.css.map": "/ReactToDoList/static/css/main.5bf606f0.chunk.css.map",
+    "static/css/main.3d3f94c5.chunk.css.map": "/ReactToDoList/static/css/main.3d3f94c5.chunk.css.map",
     "static/js/2.1a32253b.chunk.js.LICENSE.txt": "/ReactToDoList/static/js/2.1a32253b.chunk.js.LICENSE.txt",
-    "static/media/checkbox.50294de8.svg": "/ReactToDoList/static/media/checkbox.50294de8.svg",
     "static/media/done.406450f3.svg": "/ReactToDoList/static/media/done.406450f3.svg",
     "static/media/trash-can.29cca656.svg": "/ReactToDoList/static/media/trash-can.29cca656.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.302ca297.js",
     "static/js/2.1a32253b.chunk.js",
-    "static/css/main.5bf606f0.chunk.css",
-    "static/js/main.9b849be3.chunk.js"
+    "static/css/main.3d3f94c5.chunk.css",
+    "static/js/main.1a59ea34.chunk.js"
   ]
 }
